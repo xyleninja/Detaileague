@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>{{currentSummoner}}</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only>
+      <ion-icon name="md-more"></ion-icon>
+    </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <div class="currentGameTeams">
+    <ion-item-group style="background: red;">
+      <ion-item-divider style="text-align: left">Team 1</ion-item-divider>
+      <ion-item class="summonerDetails" *ngFor="let summoner of teamRed">
+        <h3 style="top:3vh;left:0;">{{summoner.name}}</h3>
+        <ion-img></ion-img>
+        <h3 style="bottom:0;left:0">{{summoner.champion}}</h3>
+        <h3 style="bottom:0;right:0">{{summoner.KDA}}</h3>
+      </ion-item>
+    </ion-item-group>
+    <ion-item-group style="background: blue;">
+      <ion-item-divider style="text-align: right" item-right>Team 2</ion-item-divider>
+            <ion-item class="summonerDetails" *ngFor="let summoner of teamBlue">
+        <h3 style="top:3vh;left:0;">{{summoner.name}}</h3>
+        <ion-img></ion-img>
+        <h3 style="bottom:0;left:0">{{summoner.champion}}</h3>
+        <h3 style="bottom:0;right:0">{{summoner.KDA}}</h3>
+      </ion-item>
+    </ion-item-group>
+  </div>
+  <h2 style="text-align: center;">Game Duration</h2>
+  <h3 style="text-align: center">4:30</h3>
+  <button ion-button style="width:90vw; position: absolute; bottom: 5vh;">Summoner Info</button>
+</ion-content>
