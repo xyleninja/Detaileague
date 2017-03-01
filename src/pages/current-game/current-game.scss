@@ -1,0 +1,28 @@
+page-current-game {
+
+    .currentGameTeams{
+        ion-item-group{
+            float: left;
+            width: 45vw;
+            height: 90vw;
+            margin-bottom: 3vh;
+        }
+    }
+
+    .summonerDetails{
+        height: 15vw;
+        border: solid 1px black;
+        h3{
+            float: left;
+            position: absolute;
+        }
+        ion-img{
+            float: left;
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 10vw;
+            height: 10vw;
+        }
+    }
+}

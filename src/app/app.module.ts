@@ -4,13 +4,15 @@ import { MyApp } from './app.component';
 import { Page1 } from '../pages/page1/page1';
 import { Page2 } from '../pages/page2/page2';
 import { HomePage } from '../pages/home/home';
+import { CurrentGamePage } from '../pages/current-game/current-game';
 
 @NgModule({
   declarations: [
     MyApp,
     Page1,
     Page2,
-    HomePage
+    HomePage,
+    CurrentGamePage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -20,7 +22,8 @@ import { HomePage } from '../pages/home/home';
     MyApp,
     Page1,
     Page2,
-    HomePage
+    HomePage,
+    CurrentGamePage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
 })
