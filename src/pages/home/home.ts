@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
 //Pages
-import { CurrentGamePage } from '../current-game/current-game';
+import { SummonerDetailsPage } from '../summoner-details/summoner-details';
 
 //Providers
 import { SummonerProvider } from '../../providers/summoner.provider';
@@ -50,7 +50,7 @@ export class HomePage {
       return;
     }
 
-    this.navCtrl.push(CurrentGamePage, summoner);
+    this.navCtrl.push(SummonerDetailsPage, summoner);
     console.log(this.summonerName);
   }
 

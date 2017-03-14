@@ -7,11 +7,11 @@ import { NavController, NavParams } from 'ionic-angular';
 })
 export class SummonerDetailsPage {
 
-  public currentSummoner = "Mute4win"
+  public summoner;
   public selectedSegment = "Overview";
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-
+    this.summoner = this.navParams.data;
   }
 
 }
