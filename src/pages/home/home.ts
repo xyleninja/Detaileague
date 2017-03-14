@@ -1,6 +1,12 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
+//Pages
+import { CurrentGamePage } from '../current-game/current-game';
+
+//Providers
+import { SummonerProvider } from '../../providers/summoner.provider';
+
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -24,12 +30,28 @@ export class HomePage {
 
   public selectedRegion = "EUW";
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-    console.log(this.regions);
+  private summonerName;
+
+  constructor(
+    public navCtrl: NavController,
+    public navParams: NavParams,
+    public summonerProvider: SummonerProvider
+    ) {
+
   }
 
-  test(){
-    console.log(this.selectedRegion);
+  send(){
+
+    this.summonerProvider.loadSummonerFromAPI(this.summonerName, this.selectedRegion);
+    let summoner = this.summonerProvider.getSummoner();
+
+    if(summoner == undefined){
+      //Toast 
+      return;
+    }
+
+    this.navCtrl.push(CurrentGamePage, summoner);
+    console.log(this.summonerName);
   }
 
 }

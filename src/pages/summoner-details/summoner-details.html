@@ -3,7 +3,7 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>{{currentSummoner}}</ion-title>
+    <ion-title>{{summoner.name}}</ion-title>
     <ion-buttons end>
       <button ion-button icon-only>
       <ion-icon name="md-more"></ion-icon>
@@ -33,7 +33,7 @@
     <div *ngSwitchCase="'Overview'" class="OverviewHeight" padding>
       <ion-row>
         <ion-col style="text-align: center">Level</ion-col>
-        <ion-col style="text-align: center">30</ion-col>
+        <ion-col style="text-align: center">{{summoner.level}}</ion-col>
       </ion-row>
       <ion-row>
         <ion-col>
@@ -44,8 +44,8 @@
               <ion-row>Wins</ion-row>
             </ion-col>
             <ion-col>
-              <ion-row justify-content-end>1242</ion-row>
-              <ion-row justify-content-end>803</ion-row>
+              <ion-row justify-content-end>{{summoner.normalGames}}</ion-row>
+              <ion-row justify-content-end>{{summoner.normalWins}}</ion-row>
             </ion-col>
           </ion-row>
         </ion-col>
@@ -57,8 +57,8 @@
               <ion-row>Wins</ion-row>
             </ion-col>
             <ion-col>
-              <ion-row justify-content-end>125</ion-row>
-              <ion-row justify-content-end>64</ion-row>
+              <ion-row justify-content-end>{{summoner.sdGames}}</ion-row>
+              <ion-row justify-content-end>{{summoner.sdWins}}</ion-row>
             </ion-col>
           </ion-row>
         </ion-col>
@@ -87,7 +87,7 @@
         <ion-col width-50 style="border: solid 1px gray; padding: 0px;">
           <div class="leagueData">Solo/Duo</div>
           <div class="leagueData">
-            <ion-img style="height: 50px;width: 50px;" src="http://localhost:3000/api/v1/assets/base_icons/challenger.png"></ion-img>
+            <ion-img style="height: 50px;width: 50px;" src="http://localhost:3000/api/v1/assets/base_icons/" + {{summoner.soloDuo}} + ".png"></ion-img>
           </div>
         </ion-col>
       </ion-row>
@@ -95,13 +95,13 @@
         <ion-col width-50 style="border: solid 1px gray;">
           <div class="leagueData">Flex 3v3</div>
           <div class="leagueData">
-            <ion-img src="http://localhost:3000/api/v1/assets/base_icons/challenger.png"></ion-img>
+            <ion-img src="http://localhost:3000/api/v1/assets/base_icons/" + {{summoner.flex3v3}} + ".png"></ion-img>
           </div>
         </ion-col>
         <ion-col width-50 style="border: solid 1px gray;">
           <div class="leagueData">Flex 5v5</div>
           <div class="leagueData">
-            <ion-img src="http://localhost:3000/api/v1/assets/base_icons/challenger.png"></ion-img>
+            <ion-img src="http://localhost:3000/api/v1/assets/base_icons/" + {{summoner.flex5v5}} + ".png"></ion-img>
           </div>
         </ion-col>
       </ion-row>

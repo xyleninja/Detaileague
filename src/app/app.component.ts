@@ -2,10 +2,10 @@ import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
 import { StatusBar, Splashscreen } from 'ionic-native';
 
+//Pages
 import { HomePage } from '../pages/home/home';
 import { CurrentGamePage } from '../pages/current-game/current-game';
 import { SummonerDetailsPage } from '../pages/summoner-details/summoner-details';
-
 
 @Component({
   templateUrl: 'app.html'

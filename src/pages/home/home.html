@@ -15,7 +15,7 @@
 <ion-content padding>
   <div class="homeInput">
     <ion-item>
-      <ion-input type="text"></ion-input>
+      <ion-input type="text" [(ngModel)]='summonerName'></ion-input>
       <ion-label stacked>Summoner name</ion-label>
     </ion-item>
     <ion-item>
@@ -24,7 +24,7 @@
         <ion-option *ngFor="let region of regions">{{region}}</ion-option>
       </ion-select>
     </ion-item>
-    <button ion-button style="width: 72vw; margin-top: 10px">Search Game</button>
+    <button ion-button style="width: 72vw; margin-top: 10px" (click)="send()">Search Game</button>
   </div>
   <div style="margin-top: 35px; word-wrap: break-word;">
     Detaileague isn't endorsed by Riot Games and doesn't reflect the views or opinions of Riot Games or anyone officially involved in producing or managing League of Legends. League of Legends and Riot Games are trademarks or registered trademarks of Riot Games, Inc. League of Legends © Riot Games, Inc.
