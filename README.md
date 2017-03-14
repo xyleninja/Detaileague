@@ -1,8 +1,8 @@
-#Detaileague
+## Detaileague
 
 This application displays information related to the game "League of Legends"
 
-#Getting started
+### Getting started
 
 Console: npm install
 
