@@ -31,101 +31,80 @@
 <ion-content>
   <div [ngSwitch]="selectedSegment">
     <div *ngSwitchCase="'Overview'" class="OverviewHeight" padding>
-        <ion-grid>
-          <ion-row>
-            <ion-col width-30 style="text-align: center">Level</ion-col>
-            <ion-col width-30 style="text-align: center">30</ion-col>
-          </ion-row>
-          <ion-row>
-            <ion-col width-40> Normal</ion-col>
-            <ion-col width-10></ion-col>
-            <ion-col width-40> Solo/Duo</ion-col>
-          </ion-row>
-          <ion-row>
-            <ion-col width-40 style="border: solid 1px gray;">
-              <ion-row>
-                <ion-col>Games</ion-col>
-                <ion-col style="text-align: right">1242</ion-col>
-              </ion-row>
-              <ion-row>
-                <ion-col>Wins</ion-col>
-                <ion-col style="text-align: right">803</ion-col>
-              </ion-row>
+      <ion-row>
+        <ion-col style="text-align: center">Level</ion-col>
+        <ion-col style="text-align: center">30</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-row>Normal</ion-row>
+          <ion-row style="border: solid 1px gray;">
+            <ion-col>
+              <ion-row>Games</ion-row>
+              <ion-row>Wins</ion-row>
             </ion-col>
-            <ion-col width-10></ion-col>
-            <ion-col width-40 style="border: solid 1px gray;">
-              <ion-row>
-                <ion-col>Games</ion-col>
-                <ion-col style="text-align: right">125</ion-col>
-              </ion-row>
-              <ion-row>
-                <ion-col>Wins</ion-col>
-                <ion-col style="text-align: right">64</ion-col>
-              </ion-row>
+            <ion-col>
+              <ion-row justify-content-end>1242</ion-row>
+              <ion-row justify-content-end>803</ion-row>
             </ion-col>
           </ion-row>
-          <ion-row>
-            <ion-col>Most Played Champions</ion-col>
-          </ion-row>
-          <ion-row>
-            <ion-list style="width: 90vw; border: solid 1px gray">
-              <ion-item style="height: 0vh; margin-top: 4px; margin-bottom: 4px;">
-                <ion-row>
-                  <ion-col>Katarina</ion-col>
-                  <ion-col style="text-align: center">Performance</ion-col>
-                </ion-row>
-                <ion-row>
-                  <ion-col>17/7/3</ion-col>
-                  <ion-col style="text-align: center">99%</ion-col>
-                </ion-row>
-              </ion-item>
-              <ion-item style="height: 0vh; margin-top: 4px; margin-bottom: 4px;">
-                <ion-row>
-                  <ion-col>Soraka</ion-col>
-                  <ion-col style="text-align: center">Performance</ion-col>
-                </ion-row>
-                <ion-row>
-                  <ion-col>1/0/33</ion-col>
-                  <ion-col style="text-align: center">99%</ion-col>
-                </ion-row>
-              </ion-item>
-              <ion-item style="height: 0vh; margin-top: 4px; margin-bottom: 4px;">
-                <ion-row>
-                  <ion-col>Annie</ion-col>
-                  <ion-col style="text-align: center">Performance</ion-col>
-                </ion-row>
-                <ion-row>
-                  <ion-col>32/1/1</ion-col>
-                  <ion-col style="text-align: center">99%</ion-col>
-                </ion-row>
-              </ion-item>
-            </ion-list>
-          </ion-row>
-          <ion-row>
-            <ion-col width-25></ion-col>
-            <ion-col width-50 padding>
-              <ion-item style="border: solid 1px gray;">
-                <ion-label>Solo/Duo</ion-label>
-                <ion-img></ion-img>
-              </ion-item>
+        </ion-col>
+        <ion-col>
+          <ion-row>Solo/Duo</ion-row>
+          <ion-row style="border: solid 1px gray;">
+            <ion-col>
+              <ion-row>Games</ion-row>
+              <ion-row>Wins</ion-row>
             </ion-col>
-            <ion-col width-25></ion-col>
-          </ion-row>
-          <ion-row>
-            <ion-col width-50 padding>
-              <ion-item style="border: solid 1px gray;">
-                <ion-label>Flex 3v3</ion-label>
-                <ion-img></ion-img>
-              </ion-item>
-            </ion-col>
-            <ion-col width-50 padding>
-              <ion-item style="border: solid 1px gray;">
-                <ion-label>Flex 5v5</ion-label>
-                <ion-img></ion-img>
-              </ion-item>
+            <ion-col>
+              <ion-row justify-content-end>125</ion-row>
+              <ion-row justify-content-end>64</ion-row>
             </ion-col>
           </ion-row>
-        </ion-grid>
+        </ion-col>
+      </ion-row>
+      <ion-row style="margin-bottom: 4px; margin-top: 10px;">Most Played Champions</ion-row>
+      <ion-row style="border: solid 1px gray;">
+        <ion-col align-self-center style="text-align: center">Katarina</ion-col>
+        <ion-col style="padding: 0px; height: 60px;">
+          <ion-img style="height: 100%; width: 100%;" src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Katarina_0.jpg"></ion-img>
+        </ion-col>
+      </ion-row>
+      <ion-row style="border: solid 1px gray;">
+        <ion-col align-self-center style="text-align: center">Zed</ion-col>
+        <ion-col style="padding: 0px; height: 60px;">
+          <ion-img style="height: 100%; width: 100%;" src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Zed_0.jpg"></ion-img>
+        </ion-col>
+      </ion-row>
+      <ion-row style="border: solid 1px gray;">
+        <ion-col align-self-center style="text-align: center">Blitzcrank</ion-col>
+        <ion-col style="padding: 0px; height: 60px;">
+          <ion-img style="height: 100%; width: 100%;" src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Blitzcrank_0.jpg"></ion-img>
+        </ion-col>
+      </ion-row>
+      
+      <ion-row justify-content-center style="margin-bottom: 8px; margin-top: 10px;">
+        <ion-col width-50 style="border: solid 1px gray; padding: 0px;">
+          <div class="leagueData">Solo/Duo</div>
+          <div class="leagueData">
+            <ion-img style="height: 50px;width: 50px;" src="http://localhost:3000/api/v1/assets/base_icons/challenger.png"></ion-img>
+          </div>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col width-50 style="border: solid 1px gray;">
+          <div class="leagueData">Flex 3v3</div>
+          <div class="leagueData">
+            <ion-img src="http://localhost:3000/api/v1/assets/base_icons/challenger.png"></ion-img>
+          </div>
+        </ion-col>
+        <ion-col width-50 style="border: solid 1px gray;">
+          <div class="leagueData">Flex 5v5</div>
+          <div class="leagueData">
+            <ion-img src="http://localhost:3000/api/v1/assets/base_icons/challenger.png"></ion-img>
+          </div>
+        </ion-col>
+      </ion-row>
     </div>
     <div *ngSwitchCase="'Matches'" padding>
       <div style="margin-top: 3px; border: solid 1px gray;">
@@ -179,7 +158,7 @@
         </ion-row>
       </div>
     </div>
-    <div *ngSwitchCase="'Champions'" style="" padding>
+    <div *ngSwitchCase="'Champions'" padding>
       <ion-row style="border: solid 1px gray;">
         <ion-col>
           <ion-img style="height: 90px;width:90px;" src="http://ddragon.leagueoflegends.com/cdn/7.5.2/img/champion/Aatrox.png"></ion-img>

@@ -13,27 +13,32 @@
 </ion-header>
 
 <ion-content padding>
-
-  <div class="currentGameTeams">
-    <ion-item-group style="background: red;">
-      <ion-item-divider style="text-align: left">Team 1</ion-item-divider>
-      <ion-item class="summonerDetails" *ngFor="let summoner of teamRed">
-        <h3 style="top:3vh;left:0;">{{summoner.name}}</h3>
-        <ion-img></ion-img>
-        <h3 style="bottom:0;left:0">{{summoner.champion}}</h3>
-        <h3 style="bottom:0;right:0">{{summoner.KDA}}</h3>
-      </ion-item>
-    </ion-item-group>
-    <ion-item-group style="background: blue;">
-      <ion-item-divider style="text-align: right" item-right>Team 2</ion-item-divider>
-            <ion-item class="summonerDetails" *ngFor="let summoner of teamBlue">
-        <h3 style="top:3vh;left:0;">{{summoner.name}}</h3>
-        <ion-img></ion-img>
-        <h3 style="bottom:0;left:0">{{summoner.champion}}</h3>
-        <h3 style="bottom:0;right:0">{{summoner.KDA}}</h3>
-      </ion-item>
-    </ion-item-group>
-  </div>
+  <ion-row>
+    <ion-col>
+      <ion-row>Team 1</ion-row>
+      <ion-row style="border: solid 1px gray" *ngFor="let summoner of teamRed">
+        <ion-col>
+          <ion-row style="margin-bottom: 8px;">{{summoner.name}}</ion-row>
+          <ion-row>{{summoner.champion}}</ion-row>
+        </ion-col>
+        <ion-col width-25 style="padding: 10px 0px 0px 0px;">
+          <ion-img style="height: 35px;width:35px;" src="http://localhost:3000/api/v1/assets/base_icons/challenger.png"></ion-img>
+        </ion-col>
+      </ion-row>
+    </ion-col>
+    <ion-col>
+      <ion-row justify-content-end>Team 2</ion-row>
+      <ion-row style="border: solid 1px gray" *ngFor="let summoner of teamBlue">
+        <ion-col width-25 style="padding: 10px 0px 0px 0px;">
+          <ion-img style="height: 35px;width:35px;" src="http://localhost:3000/api/v1/assets/base_icons/provisional.png"></ion-img>
+        </ion-col>
+        <ion-col>
+          <ion-row style="margin-bottom: 8px;" justify-content-end>{{summoner.name}}</ion-row>
+          <ion-row justify-content-end>{{summoner.champion}}</ion-row>
+        </ion-col>
+      </ion-row>
+    </ion-col>
+  </ion-row>
   <h2 style="text-align: center;">Game Duration</h2>
   <h3 style="text-align: center">4:30</h3>
   <button ion-button style="width:90vw; position: absolute; bottom: 5vh;">Summoner Info</button>
