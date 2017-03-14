@@ -13,27 +13,27 @@ export class CurrentGamePage {
     new Object({
       name: "Mute4win",
       champion: "Katarina",
-      KDA: "13/3/7"
+      KDA: "avg. 13/3/7"
     }),
     new Object({
       name: "Hiemta",
       champion: "Darius",
-      KDA: "19/2/1"
+      KDA: "avg. 19/2/1"
     }),
     new Object({
       name: "xyleninja",
       champion: "Elise",
-      KDA: "3/0/14"
+      KDA: "avg. 3/0/14"
     }),
     new Object({
       name: "Bob the Troll",
       champion: "Teemo",
-      KDA: "0/33/1"
+      KDA: " avg.0/33/1"
     }),
     new Object({
       name: "Mid or AFK",
       champion: "Riven",
-      KDA: "0/1/0"
+      KDA: "avg. 0/1/0"
     })
   );
 

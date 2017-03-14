@@ -1,0 +1,198 @@
+<ion-header >
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>{{currentSummoner}}</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only>
+      <ion-icon name="md-more"></ion-icon>
+    </button>
+    </ion-buttons>
+  </ion-navbar>
+  <div>
+    <ion-segment [(ngModel)]="selectedSegment">
+      <ion-segment-button value="Overview">
+        Overview
+      </ion-segment-button>
+      <ion-segment-button value="Matches">
+        Matches
+      </ion-segment-button>
+      <ion-segment-button value="Champions">
+        Champions
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+  <ion-label style="margin-left: 25px" *ngIf="selectedSegment == 'Overview'">Summoner Info</ion-label>
+  <ion-label style="margin-left: 25px" *ngIf="selectedSegment == 'Matches'">Recent Matches</ion-label>
+  <ion-input style="margin-left: 25px" *ngIf="selectedSegment == 'Champions'" placeholder="< Champion >"></ion-input>
+</ion-header>
+
+<ion-content>
+  <div [ngSwitch]="selectedSegment">
+    <div *ngSwitchCase="'Overview'" class="OverviewHeight" padding>
+        <ion-grid>
+          <ion-row>
+            <ion-col width-30 style="text-align: center">Level</ion-col>
+            <ion-col width-30 style="text-align: center">30</ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col width-40> Normal</ion-col>
+            <ion-col width-10></ion-col>
+            <ion-col width-40> Solo/Duo</ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col width-40 style="border: solid 1px gray;">
+              <ion-row>
+                <ion-col>Games</ion-col>
+                <ion-col style="text-align: right">1242</ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col>Wins</ion-col>
+                <ion-col style="text-align: right">803</ion-col>
+              </ion-row>
+            </ion-col>
+            <ion-col width-10></ion-col>
+            <ion-col width-40 style="border: solid 1px gray;">
+              <ion-row>
+                <ion-col>Games</ion-col>
+                <ion-col style="text-align: right">125</ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col>Wins</ion-col>
+                <ion-col style="text-align: right">64</ion-col>
+              </ion-row>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>Most Played Champions</ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-list style="width: 90vw; border: solid 1px gray">
+              <ion-item style="height: 0vh; margin-top: 4px; margin-bottom: 4px;">
+                <ion-row>
+                  <ion-col>Katarina</ion-col>
+                  <ion-col style="text-align: center">Performance</ion-col>
+                </ion-row>
+                <ion-row>
+                  <ion-col>17/7/3</ion-col>
+                  <ion-col style="text-align: center">99%</ion-col>
+                </ion-row>
+              </ion-item>
+              <ion-item style="height: 0vh; margin-top: 4px; margin-bottom: 4px;">
+                <ion-row>
+                  <ion-col>Soraka</ion-col>
+                  <ion-col style="text-align: center">Performance</ion-col>
+                </ion-row>
+                <ion-row>
+                  <ion-col>1/0/33</ion-col>
+                  <ion-col style="text-align: center">99%</ion-col>
+                </ion-row>
+              </ion-item>
+              <ion-item style="height: 0vh; margin-top: 4px; margin-bottom: 4px;">
+                <ion-row>
+                  <ion-col>Annie</ion-col>
+                  <ion-col style="text-align: center">Performance</ion-col>
+                </ion-row>
+                <ion-row>
+                  <ion-col>32/1/1</ion-col>
+                  <ion-col style="text-align: center">99%</ion-col>
+                </ion-row>
+              </ion-item>
+            </ion-list>
+          </ion-row>
+          <ion-row>
+            <ion-col width-25></ion-col>
+            <ion-col width-50 padding>
+              <ion-item style="border: solid 1px gray;">
+                <ion-label>Solo/Duo</ion-label>
+                <ion-img></ion-img>
+              </ion-item>
+            </ion-col>
+            <ion-col width-25></ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col width-50 padding>
+              <ion-item style="border: solid 1px gray;">
+                <ion-label>Flex 3v3</ion-label>
+                <ion-img></ion-img>
+              </ion-item>
+            </ion-col>
+            <ion-col width-50 padding>
+              <ion-item style="border: solid 1px gray;">
+                <ion-label>Flex 5v5</ion-label>
+                <ion-img></ion-img>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+    </div>
+    <div *ngSwitchCase="'Matches'" padding>
+      <div style="margin-top: 3px; border: solid 1px gray;">
+        <ion-row>
+          <ion-col width-33>
+            <ion-img style="height: 90px;width:90px;" src="http://ddragon.leagueoflegends.com/cdn/7.5.2/img/champion/Aatrox.png"></ion-img>
+          </ion-col>
+          <ion-col>
+            <ion-row>
+              <ion-col>Win</ion-col>
+              <ion-col>Farm 173</ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>K/D/A</ion-col>
+              <ion-col>Gold</ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>17/3/6</ion-col>
+              <ion-col>17452</ion-col>
+            </ion-row>
+          </ion-col>
+        </ion-row>
+        <ion-row style="border-top: solid 1px gray;">
+          <ion-col>Date: 12/12/2016</ion-col>
+          <ion-col>Duration: 45 min</ion-col>
+        </ion-row>
+      </div>
+      <div style="margin-top: 3px; border: solid 1px gray;">
+        <ion-row>
+          <ion-col width-33>
+            <ion-img style="height: 90px;width:90px;" src="http://ddragon.leagueoflegends.com/cdn/7.5.2/img/champion/Aatrox.png"></ion-img>
+          </ion-col>
+          <ion-col>
+            <ion-row>
+              <ion-col>Win</ion-col>
+              <ion-col>Farm 173</ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>K/D/A</ion-col>
+              <ion-col>Gold</ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>17/3/6</ion-col>
+              <ion-col>17452</ion-col>
+            </ion-row>
+          </ion-col>
+        </ion-row>
+        <ion-row style="border-top: solid 1px gray;">
+          <ion-col>Date: 12/12/2016</ion-col>
+          <ion-col>Duration: 45 min</ion-col>
+        </ion-row>
+      </div>
+    </div>
+    <div *ngSwitchCase="'Champions'" style="" padding>
+      <ion-row style="border: solid 1px gray;">
+        <ion-col>
+          <ion-img style="height: 90px;width:90px;" src="http://ddragon.leagueoflegends.com/cdn/7.5.2/img/champion/Aatrox.png"></ion-img>
+        </ion-col>
+        <ion-col>
+          <ion-row style="margin-bottom: 10px">Aatrox</ion-row>
+          <ion-row>Mastery Points</ion-row>
+          <ion-row>55321</ion-row>
+        </ion-col>
+        <ion-col>
+          <ion-img style="height: 90px;width:90px;padding: 20px;" src="http://canisback.com/champion_mastery/img/level_7.png"></ion-img>
+        </ion-col>
+      </ion-row>
+    </div>
+  </div>
+</ion-content>
