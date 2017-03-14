@@ -12,56 +12,46 @@ export class CurrentGamePage {
   public teamRed = new Array(
     new Object({
       name: "Mute4win",
-      champion: "Katarina",
-      KDA: "avg. 13/3/7"
+      champion: "Katarina"
     }),
     new Object({
       name: "Hiemta",
-      champion: "Darius",
-      KDA: "avg. 19/2/1"
+      champion: "Darius"
     }),
     new Object({
       name: "xyleninja",
-      champion: "Elise",
-      KDA: "avg. 3/0/14"
+      champion: "Elise"
     }),
     new Object({
       name: "Bob the Troll",
-      champion: "Teemo",
-      KDA: " avg.0/33/1"
+      champion: "Teemo"
     }),
     new Object({
       name: "Mid or AFK",
-      champion: "Riven",
-      KDA: "avg. 0/1/0"
+      champion: "Riven"
     })
   );
 
   public teamBlue =new Array(
     new Object({
       name: "Annie Bot",
-      champion: "Annie",
-      KDA: "4/12/1"
+      champion: "Annie"
     }),
     new Object({
       name: "Trundle Bot",
-      champion: "Trundle",
-      KDA: "1/8/5"
+      champion: "Trundle"
     }),
     new Object({
       name: "Cho'gath Bot",
-      champion: "Cho'gath",
-      KDA: "32/7/0"
+      champion: "Cho'gath"
     }),
     new Object({
       name: "Ryze Bot",
-      champion: "Ryze",
-      KDA: "16/3/4"
+      champion: "Ryze"
     }),
     new Object({
       name: "Galio Bot",
-      champion: "Galio",
-      KDA: "1/0/0"
+      champion: "Galio"
     })
   );
 

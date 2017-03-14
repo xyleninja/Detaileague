@@ -1,8 +1,18 @@
 page-summoner-details {
 
-    .OverviewHeight{
-        ion-row{
-            margin-bottom: 0.2vh;
+    .leagueData{
+        float: left;
+        width: 50%;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        vertical-align: middle;
+
+        ion-img{
+
+            height: 50px;
+            width: 50px;
+
         }
     }
 
