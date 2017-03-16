@@ -20,7 +20,7 @@
     </ion-item>
     <ion-item>
       <ion-label stacked>Region</ion-label>
-      <ion-select [(ngModel)]="selectedRegion" (ionChange)="test()">
+      <ion-select [(ngModel)]="selectedRegion">
         <ion-option *ngFor="let region of regions">{{region}}</ion-option>
       </ion-select>
     </ion-item>
